@@ -87,7 +87,7 @@ const Slider = (props) => {
       </div>
       {/* carousel */}
 
-      <div className="btns">
+      <div className="btns z-50 ">
         <FontAwesomeIcon
           className="btn"
           onClick={prev}

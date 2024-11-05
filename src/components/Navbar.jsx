@@ -1,8 +1,18 @@
 import logo from "../../public/logo.svg";
 import discord from "../../public/discord.svg";
+import bg from "../assets/starbg.svg";
+
 const Navbar = () => {
   return (
-    <nav className=" px-10 py-7 flex items-center justify-between">
+    <nav
+      className=" px-10 py-7 flex items-center justify-between"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <img src={logo} alt="logo" className="w-52 2xl:w-60  bg" />
       <ul className="flex space-x-4 border rounded-full px-3 py-2 border-[#FFFFFF33]">
         <li className="text-white text-xs 2xl:text-base  inner-shadow px-6  py-2 rounded-full">

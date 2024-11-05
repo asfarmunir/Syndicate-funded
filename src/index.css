@@ -33,6 +33,9 @@ body{
 .inner-shadow-white{
   box-shadow: inset 0 0 10px 3px #FFFFFF99;
 }
+.inner-shadow-purple{
+  box-shadow: inset 0 0 20px 3px #5B1CD4;
+}
 .inner-shadow-white-two{
   box-shadow: inset 0 0 15px 5px #FFFFFF66;
 }
@@ -63,3 +66,24 @@ body{
       rgba(255, 255, 255, 0.1) 70%,
       rgba(255, 255, 255, 0) 100%);
 }
+
+.oyo {
+  background-image:
+    radial-gradient(circle at 50% 55%, rgb(60, 42, 99) 0, transparent 30%),
+    radial-gradient(at 100% 45%, rgb(13, 30, 79) 0, transparent 0%);
+}
+
+.oyo3 {
+  background-image:
+    radial-gradient(circle at 10% 5%, rgb(79, 17, 86) 0, transparent 22%),
+    radial-gradient(at 100% 45%, rgb(13, 30, 79) 0, transparent 0%);
+  position: relative;
+}
+
+.oyo2 {
+  background-image:
+    radial-gradient(circle at 5% 25%, rgb(109, 25, 118) 0, transparent 18%),
+    radial-gradient(at 100% 25%, rgb(101, 22, 109) 0, transparent 18%);
+}
+
+

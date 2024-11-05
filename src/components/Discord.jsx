@@ -1,7 +1,8 @@
 import discordBg from "../assets/discordBg.svg";
+import "../utils/box.scss";
 const Discord = () => {
   return (
-    <div className=" inner-shadow-white-three py-24 rounded-2xl overflow-hidden  relative max-w-6xl flex flex-col items-center gap-6 2xl:max-w-7xl mx-auto my-12">
+    <div className=" box inner-shadow-white-three w-full py-24 rounded-[4rem] overflow-hidden  relative max-w-6xl flex flex-col items-center gap-6 2xl:max-w-7xl mx-auto my-12">
       <img
         src={discordBg}
         alt="discordBg"

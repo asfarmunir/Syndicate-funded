@@ -9,7 +9,7 @@ import { InfiniteMovingCards } from "./ui/MovingTestimonials";
 const Testimonials = () => {
   return (
     <div className=" w-full py-12 flex flex-col items-center gap-4 relative">
-      <h4 className="text-sm 2xl:text-sm font-semibold flex items-center gap-1 inner-shadow-white px-6 py-3 rounded-full text-white">
+      <h4 className="  text-sm 2xl:text-sm font-semibold flex items-center gap-1 inner-shadow-white px-6 py-3 rounded-full text-white">
         <img src={stars} alt="stars" className="w-5 h-5" />
         Testimonials
       </h4>

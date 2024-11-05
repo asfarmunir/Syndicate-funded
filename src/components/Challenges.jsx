@@ -18,6 +18,7 @@ const fundedData = [
       tradeThroughNews: "NO",
       holdOverTheWeekend: "NO",
     },
+    reward: 57,
   },
   {
     key: "10k",
@@ -32,6 +33,7 @@ const fundedData = [
       tradeThroughNews: "NO",
       holdOverTheWeekend: "NO",
     },
+    reward: 107,
   },
   {
     key: "25k",
@@ -46,6 +48,7 @@ const fundedData = [
       tradeThroughNews: "NO",
       holdOverTheWeekend: "NO",
     },
+    reward: 207,
   },
   {
     key: "50k",
@@ -60,6 +63,7 @@ const fundedData = [
       tradeThroughNews: "NO",
       holdOverTheWeekend: "NO",
     },
+    reward: 307,
   },
   {
     key: "100k",
@@ -74,6 +78,7 @@ const fundedData = [
       tradeThroughNews: "NO",
       holdOverTheWeekend: "NO",
     },
+    reward: 507,
   },
   {
     key: "200k",
@@ -88,6 +93,7 @@ const fundedData = [
       tradeThroughNews: "NO",
       holdOverTheWeekend: "NO",
     },
+    reward: 997,
   },
 ];
 
@@ -293,7 +299,7 @@ const Challenges = () => {
       <img
         src={moon}
         alt="moon"
-        className="absolute  w-full h-full object-center object-contain "
+        className="absolute  w-full h-full object-center object-contain   "
       />
       <div className=" w-full  flex items-end justify-between">
         <div className="flex flex-col gap-4">
@@ -718,8 +724,9 @@ const Challenges = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-2xl 2xl:text-4xl text-white font-bold py-4">
-        $62.70 for 5k account
+      <h1 className="text-2xl 2xl:text-4xl text-white font-bold  tracking-wide py-4">
+        ${fundedData.find((data) => data.key === fundedStates).reward} For{" "}
+        {fundedStates} Account
       </h1>
       <button className=" bg-gradient-to-b from-[#5B1CD4] items-center to-[#310F73] px-10 py-4 inline-flex gap-3 text-white font-semibold rounded-full shadow-inner shadow-[#FFFFFF66] ">
         Start a Challenge
