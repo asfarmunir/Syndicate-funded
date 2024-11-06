@@ -8,7 +8,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className=" w-full pb-12">
-      <div className="  w-full flex items-start justify-between p-12 ">
+      <div className="  w-full flex items-start justify-between p-12   ">
         <div className="  space-y-4">
           <img src={logo} alt="logo" className="w-64 pb-4" />
           <p className="text-white text-sm 2xl:text-base pb-3 font-light">
@@ -71,7 +71,7 @@ const Footer = () => {
           once: true,
         }}
       >
-        <img src={footerBg} alt="footerBg" className="w-full  -mt-12" />
+        <img src={footerBg} alt="footerBg" className="w-full  -mt-12 " />
       </motion.div>
       <motion.div
         initial={{

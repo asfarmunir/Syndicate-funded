@@ -64,13 +64,13 @@ export const Carousel = ({ initialScroll = 0 }) => {
     <CarouselContext.Provider
       value={{ onCardClose: handleCardClose, currentIndex }}
     >
-      <div className=" w-full  flex items-end justify-between">
-        <div className="flex flex-col gap-3">
+      <div className=" w-full px-4 md:px-12  flex flex-col md:flex-row items-center gap-4 md:items-end justify-between">
+        <div className="flex flex-col items-center md:items-start gap-3">
           <h4 className="text-sm 2xl:text-sm w-fit font-semibold flex items-center gap-1 inner-shadow-white px-6 py-3 2xl:py-4 rounded-full text-white">
             <img src={stars} alt="stars" className="w-5 h-5" />
             Funded Trader
           </h4>
-          <h1 className="text-3xl 2xl:text-4xl font-bold text-white">
+          <h1 className="text-xl md:text-3xl 2xl:text-4xl font-bold text-white">
             About Syndicate Funded
           </h1>
         </div>
@@ -94,7 +94,7 @@ export const Carousel = ({ initialScroll = 0 }) => {
         </div>
       </div>
       <div
-        className="flex  w-full  overflow-x-scroll gap-6 2xl:gap-8 flex-row justify-start overscroll-x-auto  py-10 md:py-14 scroll-smooth [scrollbar-width:none]"
+        className="flex  w-full px-10 overflow-x-scroll gap-6 2xl:gap-8 flex-row justify-start overscroll-x-auto  py-10 md:py-14 scroll-smooth [scrollbar-width:none]"
         ref={carouselRef}
         onScroll={checkScrollability}
       >

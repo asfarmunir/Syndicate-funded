@@ -28,12 +28,179 @@
         }
     }
 
-    &:hover {
-        animation-play-state: paused;
-    }
+    // &:hover {
+    //     animation-play-state: paused;
+    // }
 }
 
 @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+
+
+.box2 {
+    --start-angle1: 330deg;
+    /* Adjusts the starting point of the first beam */
+    --start-angle2: 340deg;
+    /* Adjusts the starting point of the second beam */
+    --border-angle1: var(--start-angle1);
+    --border-angle2: var(--start-angle2);
+
+    /* Define the main background */
+    --main-bg: conic-gradient(from var(--border-angle1),
+            black,
+            black 5%,
+            black 60%,
+            black 95%);
+
+    border: solid 3px transparent;
+
+    /* Define the two gradient borders with limited range */
+    --gradient-border1: conic-gradient(from var(--border-angle1),
+            transparent 0deg,
+            #4a16aa6d 10deg,
+            #5c1ecfc0 30deg,
+            transparent 45deg);
+
+    --gradient-border2: conic-gradient(from var(--border-angle2),
+            transparent 0deg,
+            #4a16aa6d 10deg,
+            #5c1ecfc0 30deg,
+            transparent 45deg);
+
+    background:
+        var(--main-bg) padding-box,
+        var(--gradient-border1) border-box,
+        var(--gradient-border2) border-box,
+        var(--main-bg) border-box;
+
+    background-position: center center;
+
+    /* Rotate both gradients in opposite directions, stopping halfway */
+    animation: bg-spin1 2s linear infinite, bg-spin2 2s linear infinite;
+
+    /* Rightward rotation (halfway only) */
+    @keyframes bg-spin1 {
+        0% {
+            --border-angle1: var(--start-angle1);
+        }
+
+        100% {
+            --border-angle1: calc(var(--start-angle1) + 0.24turn);
+            /* Move halfway and restart */
+        }
+    }
+
+    /* Leftward rotation (halfway only) */
+    @keyframes bg-spin2 {
+        0% {
+            --border-angle2: var(--start-angle2);
+        }
+
+        100% {
+            --border-angle2: calc(var(--start-angle2) - 0.24turn);
+            /* Move halfway and restart */
+        }
+    }
+
+    // &:hover {
+    //     animation-play-state: paused;
+    // }
+}
+
+/* Register CSS properties for the animation */
+@property --border-angle1 {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+@property --border-angle2 {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+.box3 {
+    --start-angle1: 270deg;
+    /* Adjusts the starting point of the first beam */
+    /* Adjusts the starting point of the second beam */
+    --border-angle1: var(--start-angle1);
+    --border-angle2: var(--start-angle2);
+
+    /* Define the main background */
+    --main-bg: conic-gradient(from var(--border-angle1),
+            black,
+            black 5%,
+            black 60%,
+            black 95%);
+
+    border: solid 3px transparent;
+
+    /* Define the two gradient borders with limited range */
+    --gradient-border1: conic-gradient(from var(--border-angle1),
+            transparent 0deg,
+            #4a16aa6d 10deg,
+            #5c1ecfc0 180deg,
+            black 270deg);
+
+    --gradient-border2: conic-gradient(from var(--border-angle2),
+            transparent 0deg,
+            transparent 10deg,
+            transparent 30deg,
+            transparent 360deg);
+            
+
+    background:
+        var(--main-bg) padding-box,
+        var(--gradient-border1) border-box,
+        var(--main-bg) border-box;
+
+    background-position: center center;
+
+    /* Rotate both gradients in opposite directions, stopping halfway */
+    animation: bg-spin1 2s linear infinite;
+
+    /* Rightward rotation (halfway only) */
+    @keyframes bg-spin1 {
+        0% {
+            --border-angle1: var(--start-angle1);
+        }
+
+        100% {
+            --border-angle1: calc(var(--start-angle1) + 0.24turn);
+            /* Move halfway and restart */
+        }
+    }
+
+    /* Leftward rotation (halfway only) */
+    @keyframes bg-spin2 {
+        0% {
+            --border-angle2: var(--start-angle2);
+        }
+
+        100% {
+            --border-angle2: calc(var(--start-angle2) - 0.24turn);
+            /* Move halfway and restart */
+        }
+    }
+
+    // &:hover {
+    //     animation-play-state: paused;
+    // }
+}
+
+/* Register CSS properties for the animation */
+@property --border-angle1 {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+@property --border-angle2 {
     syntax: "<angle>";
     inherits: true;
     initial-value: 0turn;

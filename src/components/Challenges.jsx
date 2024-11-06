@@ -3,7 +3,7 @@ import question from "../assets/question.svg";
 import { FaArrowRightLong } from "react-icons/fa6";
 import moon from "../assets/moon.svg";
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 const fundedData = [
   {
     key: "5k",
@@ -287,7 +287,7 @@ const Challenges = () => {
 
   return (
     <div
-      className=" w-full py-12 rounded-[5rem] flex flex-col items-center relative px-12 gap-8 bg-gradient-to-b from-[#00000000] to-[#5B1CD433]"
+      className=" w-full py-12 mb-16 rounded-[5rem] flex flex-col items-center relative px-12 gap-8 bg-gradient-to-b from-[#00000000] to-[#5B1CD433]"
       //   style={{
       //     backgroundImage: `url(${moon})`,
       //     backgroundSize: "contain",
@@ -296,12 +296,16 @@ const Challenges = () => {
       //     backgroundBlendMode: "color",
       //   }}
     >
-      <img
+      <motion.img
+        // initial={{ rotate: 0 }}
+        // animate={{ rotate: 360 }}
+        // transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+        // viewport={{ once: true }}
         src={moon}
         alt="moon"
         className="absolute  w-full h-full object-center object-contain   "
       />
-      <div className=" w-full  flex items-end justify-between">
+      <div className=" w-full  flex flex-col md:flex-row gap-12 items-center md:items-end justify-between">
         <div className="flex flex-col gap-4">
           <h4 className="text-sm 2xl:text-sm w-fit font-semibold flex items-center gap-1 inner-shadow-white px-6 py-3 2xl:py-4 rounded-full text-white">
             <img src={stars} alt="stars" className="w-5 h-5" />
@@ -314,7 +318,7 @@ const Challenges = () => {
             Prop trading brought to you by professional traders.
           </p>
         </div>
-        <div className="flex flex-col items-end gap-3">
+        <div className="flex flex-col items-center md:items-end gap-3">
           <div className="flex w-fit bg-[#FFFFFF0A] p-1.5 gap-1.5 border border-[#FFFFFF1A] rounded-xl">
             <button
               onClick={() => setStep(1)}
@@ -341,7 +345,7 @@ const Challenges = () => {
               2 Step
             </button>
           </div>
-          <div className="flex bg-[#FFFFFF0A] p-1.5 gap-1.5 border border-[#FFFFFF1A] rounded-xl">
+          <div className="flex bg-[#FFFFFF0A] p-1.5 gap-1.5 flex-wrap items-center justify-center border border-[#FFFFFF1A] rounded-xl">
             <button
               onClick={() => setFundedStates("5k")}
               className={`
