@@ -75,12 +75,12 @@ const Platforms = () => {
       <img
         src={lightning1}
         alt="lightning1"
-        className="absolute top-32 right-0 "
+        className="absolute hidden md:block top-32 right-0 "
       />
       <img
         src={lightning2}
         alt="lightning1"
-        className="absolute bottom-0 left-0 "
+        className="absolute hidden md:block bottom-0 left-0 "
       />
 
       <div className=" oyo flex  py-16 2xl:py-24  flex-col items-center w-full gap-5 relative">
@@ -89,7 +89,7 @@ const Platforms = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-[2.3rem] 2xl:text-[3rem] font-semibold text-white capitalize tracking-wide"
+          className="text-2xl text-center md:text-[2.3rem] 2xl:text-[3rem] leading-snug font-semibold text-white capitalize tracking-wide"
         >
           Are you ready to become <br /> syndicate funded trader?
         </motion.h1>
@@ -98,7 +98,7 @@ const Platforms = () => {
           <FaArrowRightLong className="text-lg" />
         </button>
       </div>
-      <div className="w-full mt-12 2xl:-mt-16 relative flex justify-center items-center">
+      <div className="w-full mt-12 2xl:-mt-16 relative hidden md:flex justify-center items-center">
         {/* Globe Image */}
         <img src={globe} className="w-full my-24" alt="Globe " />
         <motion.h2
@@ -142,6 +142,31 @@ const Platforms = () => {
             </motion.div>
           </motion.div>
         ))}
+      </div>
+      <div className=" p-4 block md:hidden">
+        <h2 className="text-3xl font-semibold  text-center text-white">
+          Our Platforms
+        </h2>
+        <div className="flex w-full  flex-wrap justify-center gap-12 pb-8 mt-8">
+          <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
+            <img src={platform1} alt="Platform Logo" />
+          </div>
+          <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
+            <img src={platform2} alt="Platform Logo" />
+          </div>
+          <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
+            <img src={platform3} alt="Platform Logo" />
+          </div>
+          <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
+            <img src={platform4} alt="Platform Logo" />
+          </div>
+          <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
+            <img src={platform5} alt="Platform Logo" />
+          </div>
+          <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
+            <img src={platform6} alt="Platform Logo" />
+          </div>
+        </div>
       </div>
     </div>
   );

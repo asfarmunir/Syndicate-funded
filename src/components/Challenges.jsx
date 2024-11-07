@@ -287,7 +287,7 @@ const Challenges = () => {
 
   return (
     <div
-      className=" w-full py-12 mb-16 rounded-[5rem] flex flex-col items-center relative px-12 gap-8 bg-gradient-to-b from-[#00000000] to-[#5B1CD433]"
+      className=" w-full pb-12 md:py-12 mb-6 md:mb-16 rounded-[5rem] flex flex-col items-center relative px-12 gap-8 bg-gradient-to-b from-[#00000000] to-[#5B1CD433]"
       //   style={{
       //     backgroundImage: `url(${moon})`,
       //     backgroundSize: "contain",

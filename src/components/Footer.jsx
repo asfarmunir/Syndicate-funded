@@ -8,7 +8,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className=" w-full pb-12">
-      <div className="  w-full flex items-start justify-between p-12   ">
+      <div className="  w-full flex flex-col md:flex-row gap-8 items-start justify-between p-12   ">
         <div className="  space-y-4">
           <img src={logo} alt="logo" className="w-64 pb-4" />
           <p className="text-white text-sm 2xl:text-base pb-3 font-light">
@@ -86,7 +86,7 @@ const Footer = () => {
         viewport={{
           amount: 0.2,
         }}
-        className=" w-full flex-col flex items-center gap-8 -mt-64 z-50 "
+        className=" w-full flex-col flex items-center gap-8 md:-mt-64 z-50 "
       >
         <h2 className="text-4xl 2xl:text-5xl font-semibold tracking-wide text-center text-white">
           Join the Syndicate Funded <br /> Community

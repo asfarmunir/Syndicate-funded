@@ -7,7 +7,7 @@ import cardBg from "../assets/13.svg";
 import { motion } from "framer-motion";
 const HowItWorks = () => {
   return (
-    <div className=" w-full oyo3 py-12 flex flex-col items-center gap-4 relative">
+    <div className=" w-full oyo3 md:py-12 flex flex-col items-center gap-4 relative">
       <img
         src={cardBg}
         alt="cardBg"
