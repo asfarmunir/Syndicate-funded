@@ -205,3 +205,66 @@
     inherits: true;
     initial-value: 0turn;
 }
+
+
+
+
+
+
+
+
+
+.box4 {
+    --start-angle: -20deg;
+    /* Starting angle at 90 degrees */
+    --end-angle: 90deg;
+    /* Ending angle at 180 degrees */
+    --border-angle4: var(--start-angle);
+
+    /* Main background */
+    
+
+    border: solid 3px transparent;
+
+    /* Gradient border with limited beam range */
+    --gradient-border: conic-gradient(from var(--border-angle4),
+            transparent 0deg,
+            /* Transparent start */
+            #4a16aa6d 10deg,
+            /* Beam color start */
+            #5c1ecfc0 45deg,
+            /* Beam peak color */
+            transparent 90deg
+            /* Transparent end */
+        );
+
+    background:
+        var(--main-bg) padding-box,
+        var(--gradient-border) border-box,
+        var(--main-bg) border-box;
+
+    background-position: center center;
+
+    /* Animate beam from 90 to 180 degrees */
+    animation: beam-move 2s ease-in-out infinite;
+
+    /* Keyframes to animate only from 90 to 180 degrees */
+    @keyframes beam-move {
+        0% {
+            --border-angle4: var(--start-angle);
+            /* Start at 90 degrees */
+        }
+
+        100% {
+            --border-angle4: var(--end-angle);
+            /* Move to 180 degrees */
+        }
+    }
+}
+
+/* Register CSS property for border-angle4 */
+@property --border-angle4 {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+}

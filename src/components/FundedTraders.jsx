@@ -72,7 +72,7 @@ const HowItWorks = () => {
             trading for <br /> profit.
           </p>
         </div>
-        <div className=" w-[0.5px]  z-10 h-72  shadow shadow-white absolute  top-0"></div>
+        <div className=" w-[100.1px] box4 z-10 h-72 inner-shadow-white-upper2 absolute mr-24   top-0"></div>
         <div className=" p-8  z-20 rounded-3xl absolute   top-64 2xl:top-72 bg-gradient-to-br from-[#00000000] to-[#5B1CD433] pb-14 gap-4 border flex flex-col items-center border-[#FFFFFF33]">
           <img src={rocket} alt="bulb" className="w-20 h-20 -mt-20" />
 

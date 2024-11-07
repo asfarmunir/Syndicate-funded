@@ -143,27 +143,40 @@ const Platforms = () => {
           </motion.div>
         ))}
       </div>
-      <div className=" p-4 block md:hidden">
-        <h2 className="text-3xl font-semibold  text-center text-white">
+      <div className=" p-4 block md:hidden relative">
+        <h2 className="text-3xl  font-semibold  text-center text-white">
           Our Platforms
         </h2>
-        <div className="flex w-full  flex-wrap justify-center gap-12 pb-8 mt-8">
-          <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
+        <motion.img
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
+          src={globe}
+          alt="Globe"
+          className="w-full absolute opacity-50 my-12"
+        />
+        <div className="flex w-full  flex-wrap justify-center gap-12 px-4 pb-8 mt-16">
+          <div className=" w-32 sm:w-36 flex justify-center">
             <img src={platform1} alt="Platform Logo" />
           </div>
-          <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
+          <div className=" w-32 sm:w-36 flex justify-center">
             <img src={platform2} alt="Platform Logo" />
           </div>
-          <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
+          <div className=" w-32 sm:w-36 flex justify-center">
             <img src={platform3} alt="Platform Logo" />
           </div>
-          <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
+          <div className=" w-32 sm:w-36 flex justify-center">
             <img src={platform4} alt="Platform Logo" />
           </div>
-          <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
+          <div className=" w-32 sm:w-36 flex justify-center">
             <img src={platform5} alt="Platform Logo" />
           </div>
-          <div className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center">
+          <div className=" w-32 sm:w-36 flex justify-center">
             <img src={platform6} alt="Platform Logo" />
           </div>
         </div>

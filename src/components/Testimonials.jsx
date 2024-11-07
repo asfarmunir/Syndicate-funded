@@ -31,7 +31,7 @@ const Testimonials = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true }}
-        className=" text-sm  2xl:text-base font-thin text-slate-100 tracking-wide text-center capitalize"
+        className=" text-sm  2xl:text-base px-3 font-thin text-slate-100 tracking-wide text-center capitalize"
       >
         Real stories from real traders who have found success with <br /> our
         platform.
